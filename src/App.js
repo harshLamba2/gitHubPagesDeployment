@@ -1,13 +1,26 @@
 import logo from './logo.svg';
 import './App.css';
+import { useEffect, useState } from 'react';
 
 function App() {
+
+  const [enviromentVariable, setEnviromentVariable]= useState("");
+
+  useEffect(()=>{
+
+    setEnviromentVariable(process.env.REACT_APP_SOME_ENVIROMENT_VARIABLE);
+
+  },[])
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+        HARSH HAS DEPLOYED ON GITHUB PAGES
+        </p>
+        <p>
+        ENVIROMENT VARIABLE: {enviromentVariable}
         </p>
         <a
           className="App-link"
